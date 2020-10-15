@@ -1,0 +1,264 @@
+.ant-layout,
+.ant-layout-content {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    border: 1px solid #DCDCDC;
+    padding: 10px;
+    overflow: auto;
+    color: #707070;
+
+    .top {
+        padding: 10px;
+        height: 330px;
+
+        .top-left {
+            height: 100%;
+            overflow: auto;
+
+            .left {
+                border: 1px solid #DCDCDC;
+                height: 100%;
+                overflow: auto;
+            }
+        }
+
+        .top-right {
+            height: 100%;
+
+            .right {
+                border: 1px solid #DCDCDC;
+                height: 100%;
+                overflow: auto;
+
+                p {
+                    margin: 0;
+                }
+
+                .info-contanier {
+                    line-height: 36px;
+
+                    .info {
+                        width: 100%;
+                        margin: 5px 10px;
+                        padding: 6px 12px;
+                        display: inline-block;
+
+                        span {
+                            .p-1 {
+                                text-align: center;
+                                color: #313131;
+                                font-size: 14px;
+                            }
+
+                            .p-2 {
+                                text-align: center;
+                                color: #EB6100;
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+
+                .logo {
+                    height: 100%;
+
+                    .logo-chart {
+                        width: 200px;
+                        height: 230px;
+                    }
+                }
+
+                .news {
+                    height: 42px;
+                    line-height: 42px;
+                    background: #FFFAC1;
+                    vertical-align: middle;
+
+                    span {
+                        color: #707070;
+                        vertical-align: middle;
+
+                        img {
+                            width: 30px;
+                        }
+
+                        .notice {
+                            font-size: 11px;
+                        }
+
+                        .close {
+                            float: right;
+                            font-size: 11px;
+                            cursor: pointer;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+
+                .date {
+                    text-align: right;
+                    margin-right: 17px;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        padding: 10px;
+        min-height: 100px;
+
+        .bottom-container {
+            padding: 10px;
+            border: 1px solid #DCDCDC;
+
+            .buttons {
+                margin: 10px 5px;
+
+                span {
+                    margin: 0 16px;
+                    font-weight: bolder;
+                    font-size: 16px;
+                    color: #707070;
+                }
+
+                Button {
+                    margin: 0 8px;
+                    border-radius: 15px;
+
+                    span {
+                        color: #707070;
+                    }
+                }
+
+                Button:hover {
+                    background: #0079E9;
+
+                    span {
+                        color: #ffffff;
+                    }
+                }
+            }
+
+            .bottom-top {
+                margin: 5px;
+                height: 350px;
+            }
+
+            .bottom-bottom {
+                margin: 5px;
+                height: 350px;
+
+                .bottom-quarter {
+                    height: 100%;
+                    overflow: auto;
+
+                    .quarter {
+                        height: 100%;
+                        overflow: auto;
+                    }
+                }
+            }
+
+            .quarter {
+                border: 1px solid #DCDCDC;
+                height: 350px;
+
+                .situation {
+                    float: left;
+                    width: 50%;
+                    height: 50%;
+                    text-align: center;
+
+                    div {
+                        float: left;
+                        position: relative;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        img {
+                            float: left;
+                            padding-right: 20px;
+                            padding-top: 20px;
+                            width: 120px;
+                            height: 120px;
+                        }
+
+                        span {
+                            float: left;
+                            text-align: center;
+                            line-height: 0px;
+
+                            .p-1 {
+                                font-size: 20px;
+                                font-weight: bold;
+                                color: rgba(49, 49, 49, 1);
+                                line-height: 24px;
+                                padding-top: 36px;
+                            }
+
+                            .p-2 {
+                                font-size: 24px;
+                                font-weight: bold;
+                                color: rgba(235, 97, 0, 1);
+                                font-family: "MicrosoftYaHei";
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .chart {
+                height: 300px;
+            }
+        }
+    }
+
+    .table-title {
+        text-align: center;
+        font-size: 1.5em;
+        color: #77aaee;
+    }
+
+    .tab-pane {
+        padding: 5px;
+    }
+}
+
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+    font-size: 14px;
+    padding: 8px;
+}
+
+table span.green {
+    color: rgba(15, 255, 136, 1);
+
+    i {
+        font-weight: bolder;
+    }
+}
+
+table span.red {
+    color: rgba(231, 52, 49, 1);
+
+    i {
+        font-weight: bolder;
+    }
+}
+
+table .anticon.anticon-bell.green {
+    color: rgba(15, 255, 136, 1);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+table .anticon.anticon-bell.red {
+    color: rgba(231, 52, 49, 1);
+    font-weight: bolder;
+    font-size: 18px;
+}

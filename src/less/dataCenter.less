@@ -1,0 +1,293 @@
+.data-center {
+  margin: 16px;
+  padding: 18px 15px;
+  box-shadow: 0px 0px 6px 0px rgba(9, 34, 67, 0.1);
+
+  //数据中心统一样式
+  .ant-pagination.ant-table-pagination {
+    text-align: right;
+  }
+
+  .data-connect-list-table {
+
+  }
+
+}
+
+//数据连接类型
+.data-connect-type {
+
+  .ant-modal-title {
+    color: #666666;
+  }
+
+  ul {
+    flex-wrap: wrap;
+  }
+
+  li {
+    list-style-type: none;
+    //border-bottom: 1px solid #E9E9E9;
+  }
+
+  .connect-type {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 0 10px 10px 0;
+    cursor: pointer;
+    background: url(~../images/dataCenter/dataConnectType.png);
+    border-radius: 4px;
+  }
+
+  .connect-type.selected, .connect-type:hover {
+    //color: #ffffff;
+    border: 1px solid #108EE9;
+  }
+
+//  给模态框body添加滚动
+
+  .ant-modal-body {
+    height: 400px;
+    overflow-y: auto;
+  }
+}
+
+//数据连接参数
+.data-connect-config {
+
+  .ant-form-item {
+    margin-bottom: 10px;
+  }
+
+  .ant-form-item-label {
+    text-align: center;
+  }
+
+}
+
+// 数据连接配置详情
+.data-connect-config-detail {
+
+  .ant-form-item {
+    margin-bottom: 10px;
+  }
+
+  .ant-form-item-label {
+    text-align: center;
+  }
+
+  .using-data-source-list {
+    border-top: 1px solid #E9E9E9;
+    padding: 16px 0 0 0;
+  }
+
+  .my-modal-footer {
+    margin-top: 20px;
+    border-top: 1px solid #e9e9e9;
+    padding: 10px 16px 10px 10px;
+    text-align: right;
+
+    button {
+      margin-left: 8px;
+    }
+  }
+}
+
+//数据源类型模态框
+.data-source-type {
+
+  p {
+    border-left: 2px solid #289CEB;
+    padding-left: 8px;
+  }
+
+  .local-source-type-container {
+    margin-bottom: 16px;
+
+    li.data-source-type-cell {
+
+      display: flex;
+      align-items: center;
+      border: 1px solid #108EE9;
+      margin-right: 32px;
+      width: 100px;
+      height: 80px;
+      background: #ffffff;
+      border-radius: 4px;
+      text-align: center;
+      cursor: pointer;
+      //line-height: 80px;
+
+      &.selected {
+        background: rgba(16, 142, 233, 1);
+
+        span {
+          background-position-y: -57px;
+        }
+      }
+    }
+
+    span.data-source-type-cell {
+      width: 87px;
+      height: 32px;
+      margin: 0 auto;
+      display: inline-block;
+      background: url(~../images/dataCenter/dataCenter.png);
+    }
+  }
+
+  .remote-source-type-container {
+    padding-top: 16px;
+    border-top: 1px solid #E9E9E9;
+  }
+
+  .data-connect-list {
+    margin-top: 10px;
+
+    li {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      margin: 0 24px 24px 0;
+    }
+  ;
+
+    span {
+      display: inline-block;
+      width: 100px;
+
+      &.data-source-type {
+        cursor: pointer;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        border: 1px solid #108EE9;
+        color: #108EE9;
+        border-radius: 4px;
+        font-size: 18px;
+        font-weight: bold;
+
+        &.selected {
+          background: #108EE9;
+          color: #ffffff;
+        }
+      }
+
+      &.data-source-name {
+        text-align: center;
+        color: #108EE9;
+      }
+    }
+  }
+}
+
+// 添加数据源
+.add-data-source-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  //统一样式
+  .step-control {
+    text-align: right;
+
+    button {
+      margin-left: 8px;
+    }
+  }
+
+  .add-data-source-title {
+    border-left: 2px solid #289CEB;
+    padding-left: 8px;
+  }
+
+  .add-data-source {
+    margin-top: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .steps-content {
+    background: #FBFBFB;
+    margin-bottom: 13px;
+    margin-top: 29px;
+    height: 300px;
+    flex: 1;
+  }
+
+  //  选择应用类型
+  .app-type-container {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    ul {
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+
+    }
+
+    li {
+      list-style-type: none;
+      display: inline-block;
+      width: 128px;
+      height: 128px;
+      background: url(~../images/dataCenter/dataCenter.png);
+      background-position-y: 169px;
+
+      &:first-child {
+        margin-right: 64px;
+      }
+
+      &.selected {
+        background-position-y: 337px;
+      }
+    }
+
+  }
+
+  //  存储设置
+  .storage-config-container {
+    flex: 1;
+
+    .ant-radio-wrapper {
+      display: flex;
+      align-items: center;
+
+      span:nth-child(2) {
+        display: flex;
+      }
+
+      .ant-row.ant-form-item {
+        margin: 0;
+      }
+    }
+  }
+
+  //  集中策略设置
+  .collect-strategy-container {
+    flex: 1;
+
+    .ant-form-item {
+      margin-bottom: 5px;
+    }
+  }
+
+  //  分发策略
+  .distribute-strategy-container {
+
+    .ant-row.ant-form-item {
+      margin-bottom: 5px;
+    }
+
+  }
+
+}
+
+
+

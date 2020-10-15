@@ -1,0 +1,3152 @@
+{
+  "success": "true",
+  "msg": "ok",
+  "data": {
+    "page": {
+      "total": 4
+    },
+    "list": [
+      {
+        "key": 1,
+        "id": 1,
+        "name": "TB_ACC_ACCOUNT_SRC_FEE_D",
+        "type": "收入",
+        "table": "SRC.TB_ACC_ACCOUNT_SRC_FEE_D",
+        "connType": "FTP",
+        "cycle": "每日12点10分运行一次 ",
+        "fileFormat": "F_ACC_ACCOUNT_YYYMMDD",
+        "inSize": "12G",
+        "busiType": "采集",
+        "store": "hive",
+        "status": "采集成功,无分发",
+        "statusReason": "",
+        "lastBatchFinshTime": "2018-04-16 12:25:02",
+        "connId": "6",
+        "in": {
+          "transType": "1",
+          "interval": "每日",
+          "hour": "12",
+          "min": "10",
+          "starttime": "2018-04-10 20:20:11",
+          "endtime": "",
+          "downfileFormat": "F_ACC_ACCOUNT_${YYYMMDD}",
+          "batchFormat": "YYYYMMDD",
+          "storeop": "覆盖"
+        },
+        "out": [],
+        "inlog": {
+          "databatch": "20180416",
+          "allbatch": "2018041612100",
+          "status": "成功",
+          "allstep": [
+            {
+              "stepName": "FTP下载",
+              "starttime": "2018-04-16 12:10:00",
+              "endtime": "2018-04-16 12:15:00",
+              "lost": "300",
+              "stat": "成功",
+              "statReason": "",
+              "size": "10G",
+              "count": "13673020"
+            },
+            {
+              "stepName": "合并文件",
+              "starttime": "2018-04-16 12:15:05",
+              "endtime": "2018-04-16 12:17:45",
+              "lost": "160",
+              "stat": "成功",
+              "statReason": "",
+              "size": "10G",
+              "count": "13673021"
+            },
+            {
+              "stepName": "入临时表",
+              "starttime": "2018-04-16 12:17:55",
+              "endtime": "2018-04-16 12:19:10",
+              "lost": "135",
+              "stat": "成功",
+              "statReason": "",
+              "size": "10G",
+              "count": "13673021"
+            },
+            {
+              "stepName": "入存储表",
+              "starttime": "2018-04-16 12:19:15",
+              "endtime": "2018-04-16 12:19:47",
+              "lost": "32",
+              "stat": "成功",
+              "statReason": "",
+              "size": "10G",
+              "count": "13673021"
+            }
+          ],
+          "addstep": [
+            {
+              "addbatch": "20180416131600",
+              "stepName": "FTP下载",
+              "starttime": "2018-04-16 13:16:00",
+              "endtime": "2018-04-16 13:18:10",
+              "lost": "130",
+              "stat": "成功",
+              "statReason": "",
+              "size": "2G",
+              "count": "1654010"
+            },
+            {
+              "addbatch": "20180416131600",
+              "stepName": "合并文件",
+              "starttime": "2018-04-16 13:18:15",
+              "endtime": "2018-04-16 13:19:30",
+              "lost": "75",
+              "stat": "成功",
+              "statReason": "",
+              "size": "2G",
+              "count": "1654010"
+            },
+            {
+              "addbatch": "20180416131600",
+              "stepName": "入临时表",
+              "starttime": "2018-04-16 13:19:35",
+              "endtime": "2018-04-16 13:20:01",
+              "lost": "26",
+              "stat": "成功",
+              "statReason": "",
+              "size": "2G",
+              "count": "1654010"
+            },
+            {
+              "addbatch": "20180416131600",
+              "stepName": "批次存量数据再入临时表",
+              "starttime": "2018-04-16 13:20:06",
+              "endtime": "2018-04-16 13:23:28",
+              "lost": "202",
+              "stat": "成功",
+              "statReason": "",
+              "size": "10G",
+              "count": "13673021"
+            },
+            {
+              "addbatch": "20180416131600",
+              "stepName": "入存储表",
+              "starttime": "2018-04-16 13:23:33",
+              "endtime": "2018-04-16 13:24:25",
+              "lost": "52",
+              "stat": "成功",
+              "statReason": "",
+              "size": "12G",
+              "count": "15327031"
+            }
+          ]
+        },
+        "cu": "qlh01",
+        "ct": "2018-04-12 18:21:51"
+      },
+      {
+        "key": 2,
+        "busiType": "采集",
+        "connId": "1",
+        "connType": "FTP",
+        "cycle": "每小时10分运行一次",
+        "fileFormat": "F_MSG_SEND_YYYMMDDHH",
+        "id": "2",
+        "in": {
+          "batchFormat": "YYYMMDDHH",
+          "cron": "1 10 * * * *",
+          "day": "",
+          "downfileFormat": "F_MSG_SEND_${YYYMMDDHH}_${N3}",
+          "endtime": "",
+          "hour": "",
+          "interval": "cron表达式",
+          "min": "",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "8G",
+        "inlog": {
+          "allbatch": "20180416181000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "20310450",
+              "endtime": "2018-04-16 18:15:01",
+              "lost": "301",
+              "size": "3G",
+              "starttime": "2018-04-16 18:10:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "20310450",
+              "endtime": "2018-04-16 18:17:05",
+              "lost": "119",
+              "size": "3G",
+              "starttime": "2018-04-16 18:15:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "20310450",
+              "endtime": "2018-04-16 18:19:20",
+              "lost": "130",
+              "size": "3G",
+              "starttime": "2018-04-16 18:17:10",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "20310450",
+              "endtime": "2018-04-16 18:20:18",
+              "lost": "52",
+              "size": "3G",
+              "starttime": "2018-04-16 18:19:25",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "2018041812",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 12:35:02",
+        "name": "TB_MSG_SEND_INFO",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.TB_MSG_SEND_INFO_H",
+        "type": "收入"
+      },
+      {
+        "key": 3,
+        "busiType": "分发",
+        "connType": "",
+        "cycle": "",
+        "fileFormat": "",
+        "id": "3",
+        "inSize": "",
+        "lastBatchFinshTime": "",
+        "name": "KB_CDMA_DATA_SUM_D_MID",
+        "out": [
+          {
+            "connId": "4",
+            "cycle": "每日23点00分运行一次",
+            "lastDataBatch": "2018-04-16 23:18:02",
+            "outSize": "24G",
+            "outlog": {
+              "addstep": [
+                {
+                  "addbatch": "20180417102302",
+                  "count": "113453",
+                  "endtime": "2018-04-17 10:23:52",
+                  "lost": "50",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:02",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "20180417102302",
+                  "count": "113453",
+                  "endtime": "2018-04-17 10:24:20",
+                  "lost": "23",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:57",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "allbatch": "20180416230000",
+              "allstep": [
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:05:05",
+                  "lost": "305",
+                  "size": "20G",
+                  "starttime": "2018-04-16 23:00:00",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:07:02",
+                  "lost": "118",
+                  "size": "20G",
+                  "starttime": "2018-04-16 23:05:10",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "清理目标表相关数据"
+                },
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:08:11",
+                  "lost": "64",
+                  "size": "20G",
+                  "starttime": "2018-04-16 23:07:07",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "databatch": "2018041623",
+              "status": "成功"
+            },
+            "stat": "分发成功",
+            "statReason": "",
+            "toTarget": "BP.KB_CDMA_DATA_SUM_D_MID"
+          }
+        ],
+        "status": "分发成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "MID.KB_CDMA_DATA_SUM_D_MID",
+        "type": "流量"
+      },
+      {
+        "key": 4,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日20点20分运行一次",
+        "fileFormat": "TB_CDMA_HFF_C_1X_YYYYMMDD",
+        "id": "4",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "TB_CDMA_HFF_C_1X_${YYYMMDD}_${N3}",
+          "endtime": "2018-07-01 00:00:00",
+          "hour": "20",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "9G",
+        "inlog": {
+          "allbatch": "20180416202000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "200112290",
+              "endtime": "2018-04-16 20:24:01",
+              "lost": "241",
+              "size": "9G",
+              "starttime": "2018-04-16 20:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "200112290",
+              "endtime": "2018-04-16 20:26:42",
+              "lost": "156",
+              "size": "9G",
+              "starttime": "2018-04-16 20:24:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "200112290",
+              "endtime": "2018-04-16 20:28:35",
+              "lost": "108",
+              "size": "9G",
+              "starttime": "2018-04-16 20:26:47",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "200112290",
+              "endtime": "2018-04-16 20:29:49",
+              "lost": "69",
+              "size": "9G",
+              "starttime": "2018-04-16 20:28:40",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 20:29:49",
+        "name": "TB_CDMA_HFF_C_1X_D",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.TB_CDMA_HFF_C_1X_D",
+        "type": "流量"
+      },
+      {
+        "key": 5,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日21点20分运行一次",
+        "fileFormat": "TB_CDMA_YFF_WLAN_200_YYYYMMDD",
+        "id": "5",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "TB_CDMA_YFF_WLAN_200_${YYYMMDD}_${N3}",
+          "endtime": "2018-07-01 00:00:00",
+          "hour": "21",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "6G",
+        "inlog": {
+          "allbatch": "20180416212000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 21:23:11",
+              "lost": "191",
+              "size": "6G",
+              "starttime": "2018-04-16 21:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 21:25:28",
+              "lost": "132",
+              "size": "6G",
+              "starttime": "2018-04-16 21:23:16",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 21:28:20",
+              "lost": "83",
+              "size": "6G",
+              "starttime": "2018-04-16 21:26:47",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 21:29:23",
+              "lost": "58",
+              "size": "6G",
+              "starttime": "2018-04-16 21:28:25",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 20:29:23",
+        "name": "TB_CDMA_YFF_WLAN_200_D",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.TB_CDMA_YFF_WLAN_200_D",
+        "type": "流量"
+      },
+      {
+        "key": 6,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日11点00分运行一次",
+        "fileFormat": "DMS_WEEK_WORK__2YYYYMMDD",
+        "id": "6",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMS_WEEK_WORK_${YYYMMDD}_${N3}",
+          "endtime": "2018-07-01 00:00:00",
+          "hour": "22",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "6G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:25:01",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:23:07",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:26:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:25:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:28:12",
+              "lost": "80",
+              "size": "6G",
+              "starttime": "2018-04-16 22:26:52",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 22:28:12",
+        "name": "DMS_WEEK_WORK_2",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMS_WEEK_WORK_2",
+        "type": "流量"
+      },
+      {
+        "key": 7,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日13点30分运行一次",
+        "fileFormat": "DMS_SR_CALL_YYYYMMDD",
+        "id": "7",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMS_SR_CALL_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "23",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "8G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:25:01",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:23:07",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:26:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:25:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:28:12",
+              "lost": "80",
+              "size": "6G",
+              "starttime": "2018-04-16 22:26:52",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 22:28:12",
+        "name": "DMS_SR_CALL",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMS_SR_CALL",
+        "type": "流量"
+      },
+      {
+        "key": 8,
+        "busiType": "采集",
+        "connId": "8",
+        "connType": "FTP",
+        "cycle": "每日12点20分运行一次",
+        "fileFormat": "DMC_SR_CDR_YYYYMMDD",
+        "id": "8",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMC_SR_CDR_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "23",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "5G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:15:46",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:10:17",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:18:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:15:46",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:19:12",
+              "lost": "80",
+              "size": "5G",
+              "starttime": "2018-04-16 22:18:47",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 18:22:12",
+        "name": "DMC_SR_CDR",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMC_SR_CDR",
+        "type": "流量"
+      },
+      {
+        "key": 9,
+        "busiType": "采集",
+        "connId": "3",
+        "connType": "FTP",
+        "cycle": "每日19点30分运行一次",
+        "fileFormat": "TB_CUST_ACC_YYYYMMDD",
+        "id": "9",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "TB_CUST_ACC_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "19",
+          "interval": "每日",
+          "min": "30",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "10G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:35:02",
+              "lost": "382",
+              "size": "10G",
+              "starttime": "2018-04-16 19:30:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:39:02",
+              "lost": "214",
+              "size": "510G",
+              "starttime": "2018-04-16 19:35:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:42:02",
+              "lost": "133",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:40:02",
+              "lost": "80",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 19:40:02",
+        "name": "DMC_SR_CDR",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.TB_CUST_ACC",
+        "type": "流量"
+      },
+      {
+        "key": 10,
+        "busiType": "分发",
+        "connType": "",
+        "cycle": "",
+        "fileFormat": "",
+        "id": "10",
+        "inSize": "",
+        "lastBatchFinshTime": "",
+        "name": "KB_CDMA_DATA_SUM_D_MID1",
+        "out": [
+          {
+            "connId": "4",
+            "cycle": "每日23点00分运行一次",
+            "lastDataBatch": "2018-04-16 23:18:02",
+            "outSize": "24G",
+            "outlog": {
+              "addstep": [
+                {
+                  "addbatch": "20180417102302",
+                  "count": "1134533",
+                  "endtime": "2018-04-17 10:23:52",
+                  "lost": "50",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:02",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "20180417102302",
+                  "count": "113453",
+                  "endtime": "2018-04-17 10:24:20",
+                  "lost": "23",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:57",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "allbatch": "20180416230000",
+              "allstep": [
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:05:05",
+                  "lost": "305",
+                  "size": "20G",
+                  "starttime": "2018-04-16 23:00:00",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:07:02",
+                  "lost": "128",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:05:10",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "清理目标表相关数据"
+                },
+                {
+                  "addbatch": "",
+                  "count": "20134531",
+                  "endtime": "2018-04-16 23:08:11",
+                  "lost": "64",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:07:07",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "databatch": "2018041623",
+              "status": "成功"
+            },
+            "stat": "分发成功",
+            "statReason": "",
+            "toTarget": "BP.KB_CDMA_DATA_SUM_D_MID"
+          }
+        ],
+        "status": "分发成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "MID.KB_CDMA_DATA_SUM_D_MID1",
+        "type": "流量"
+      },
+      {
+        "key": 11,
+        "busiType": "分发",
+        "connType": "",
+        "cycle": "",
+        "fileFormat": "",
+        "id": "11",
+        "inSize": "",
+        "lastBatchFinshTime": "",
+        "name": "KB_CDMA_DATA_TTIE_D_MID1",
+        "out": [
+          {
+            "connId": "4",
+            "cycle": "每日23点00分运行一次",
+            "lastDataBatch": "2018-04-16 23:18:02",
+            "outSize": "24G",
+            "outlog": {
+              "addstep": [
+                {
+                  "addbatch": "20180417102302",
+                  "count": "1134533",
+                  "endtime": "2018-04-17 10:23:52",
+                  "lost": "50",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:02",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "20180417102302",
+                  "count": "113453",
+                  "endtime": "2018-04-17 10:24:20",
+                  "lost": "23",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:57",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "allbatch": "20180416230000",
+              "allstep": [
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:05:05",
+                  "lost": "305",
+                  "size": "20G",
+                  "starttime": "2018-04-16 23:00:00",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:07:02",
+                  "lost": "128",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:05:10",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "清理目标表相关数据"
+                },
+                {
+                  "addbatch": "",
+                  "count": "20134531",
+                  "endtime": "2018-04-16 23:08:11",
+                  "lost": "64",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:07:07",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "databatch": "2018041623",
+              "status": "成功"
+            },
+            "stat": "分发成功",
+            "statReason": "",
+            "toTarget": "BP.KB_CDMA_DATA_TTIE_D_MID1"
+          }
+        ],
+        "status": "分发成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "MID.KB_CDMA_DATA_TTIE_D_MID1",
+        "type": "流量"
+      },
+      {
+        "key": 12,
+        "busiType": "采集",
+        "connId": "3",
+        "connType": "FTP",
+        "cycle": "每日19点30分运行一次",
+        "fileFormat": "TB_B_PAYLOG_YYYYMMDD",
+        "id": "12",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "TB_B_PAYLOG_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "19",
+          "interval": "每日",
+          "min": "30",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "10G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:35:02",
+              "lost": "382",
+              "size": "10G",
+              "starttime": "2018-04-16 19:30:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:39:02",
+              "lost": "214",
+              "size": "510G",
+              "starttime": "2018-04-16 19:35:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:42:02",
+              "lost": "133",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:40:02",
+              "lost": "80",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 19:40:02",
+        "name": "TB_B_PAYLOG",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.TB_B_PAYLOG",
+        "type": "流量"
+      },
+      {
+        "key": 13,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日21点20分运行一次",
+        "fileFormat": "DMS_WEEK_WORK_YYYYMMDD",
+        "id": "13",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMS_WEEK_WORK_${YYYMMDD}_${N3}",
+          "endtime": "2018-07-01 00:00:00",
+          "hour": "22",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "6G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:25:01",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:23:07",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:26:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:25:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:28:12",
+              "lost": "80",
+              "size": "6G",
+              "starttime": "2018-04-16 22:26:52",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 22:28:12",
+        "name": "DMS_WEEK_WORK",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMS_WEEK_WORK",
+        "type": "流量"
+      },
+      {
+        "key": 14,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日12点00分运行一次",
+        "fileFormat": "DMS_WEEK_WORK__2YYYYMMDD",
+        "id": "14",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMS_WEEK_WORK_${YYYMMDD}_${N3}",
+          "endtime": "2018-07-01 00:00:00",
+          "hour": "22",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "6G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:25:01",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:23:07",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:26:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:25:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:28:12",
+              "lost": "80",
+              "size": "6G",
+              "starttime": "2018-04-16 22:26:52",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 22:28:12",
+        "name": "DMS_WEEK_WORK_2",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMS_WEEK_WORK_2",
+        "type": "流量"
+      },
+      {
+        "key": 15,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日13点30分运行一次",
+        "fileFormat": "DMS_SS_CALL_YYYYMMDD",
+        "id": "15",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMS_SR_CALL_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "23",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "8G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:25:01",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:23:07",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:26:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:25:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:28:12",
+              "lost": "80",
+              "size": "6G",
+              "starttime": "2018-04-16 22:26:52",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 22:28:12",
+        "name": "DMS_SR_CALL",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMS_SR_CALL",
+        "type": "流量"
+      },
+      {
+        "key": 16,
+        "busiType": "采集",
+        "connId": "8",
+        "connType": "FTP",
+        "cycle": "每日12点25分运行一次",
+        "fileFormat": "DMC_TE_CDR_YYYYMMDD",
+        "id": "16",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMC_SR_CDR_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "23",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "5G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:15:46",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:10:17",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:18:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:15:46",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:19:12",
+              "lost": "80",
+              "size": "5G",
+              "starttime": "2018-04-16 22:18:47",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 18:22:12",
+        "name": "DMC_SR_CDR",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMC_SR_CDR",
+        "type": "流量"
+      },
+      {
+        "key": 17,
+        "busiType": "采集",
+        "connId": "3",
+        "connType": "FTP",
+        "cycle": "每日19点40分运行一次",
+        "fileFormat": "TB_CUST_USER_YYYYMMDD",
+        "id": "17",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "TB_CUST_ACC_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "19",
+          "interval": "每日",
+          "min": "30",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "10G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:35:02",
+              "lost": "382",
+              "size": "10G",
+              "starttime": "2018-04-16 19:30:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:39:02",
+              "lost": "214",
+              "size": "510G",
+              "starttime": "2018-04-16 19:35:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:42:02",
+              "lost": "133",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:40:02",
+              "lost": "80",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 19:40:02",
+        "name": "DMC_SR_CDR",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.TB_CUST_ACC",
+        "type": "流量"
+      },
+      {
+        "key": 18,
+        "busiType": "分发",
+        "connType": "",
+        "cycle": "",
+        "fileFormat": "",
+        "id": "18",
+        "inSize": "",
+        "lastBatchFinshTime": "",
+        "name": "KB_CDMA_DATA_CO_MID1",
+        "out": [
+          {
+            "connId": "4",
+            "cycle": "每日23点00分运行一次",
+            "lastDataBatch": "2018-04-16 23:18:02",
+            "outSize": "24G",
+            "outlog": {
+              "addstep": [
+                {
+                  "addbatch": "20180417102302",
+                  "count": "1134533",
+                  "endtime": "2018-04-17 10:23:52",
+                  "lost": "50",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:02",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "20180417102302",
+                  "count": "113453",
+                  "endtime": "2018-04-17 10:24:20",
+                  "lost": "23",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:57",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "allbatch": "20180416230000",
+              "allstep": [
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:05:05",
+                  "lost": "305",
+                  "size": "20G",
+                  "starttime": "2018-04-16 23:00:00",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:07:02",
+                  "lost": "128",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:05:10",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "清理目标表相关数据"
+                },
+                {
+                  "addbatch": "",
+                  "count": "20134531",
+                  "endtime": "2018-04-16 23:08:11",
+                  "lost": "64",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:07:07",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "databatch": "2018041623",
+              "status": "成功"
+            },
+            "stat": "分发成功",
+            "statReason": "",
+            "toTarget": "BP.KB_CDMA_DATA_SUM_D_MID"
+          }
+        ],
+        "status": "分发成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "MID.KB_CDMA_DATA_SUM_D_MID1",
+        "type": "流量"
+      },
+      {
+        "key": 19,
+        "busiType": "分发",
+        "connType": "",
+        "cycle": "",
+        "fileFormat": "",
+        "id": "19",
+        "inSize": "",
+        "lastBatchFinshTime": "",
+        "name": "KB_CDMA_DATA_FLIE_MID1",
+        "out": [
+          {
+            "connId": "4",
+            "cycle": "每日23点00分运行一次",
+            "lastDataBatch": "2018-04-16 23:18:02",
+            "outSize": "24G",
+            "outlog": {
+              "addstep": [
+                {
+                  "addbatch": "20180417102302",
+                  "count": "1134533",
+                  "endtime": "2018-04-17 10:23:52",
+                  "lost": "50",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:02",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "20180417102302",
+                  "count": "113453",
+                  "endtime": "2018-04-17 10:24:20",
+                  "lost": "23",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:57",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "allbatch": "20180416230000",
+              "allstep": [
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:05:05",
+                  "lost": "305",
+                  "size": "20G",
+                  "starttime": "2018-04-16 23:00:00",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:07:02",
+                  "lost": "128",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:05:10",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "清理目标表相关数据"
+                },
+                {
+                  "addbatch": "",
+                  "count": "20134531",
+                  "endtime": "2018-04-16 23:08:11",
+                  "lost": "64",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:07:07",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "databatch": "2018041623",
+              "status": "成功"
+            },
+            "stat": "分发成功",
+            "statReason": "",
+            "toTarget": "BP.KB_CDMA_DATA_TTIE_D_MID1"
+          }
+        ],
+        "status": "分发成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "MID.KB_CDMA_DATA_TTIE_D_MID1",
+        "type": "流量"
+      },
+      {
+        "key": 20,
+        "busiType": "采集",
+        "connId": "3",
+        "connType": "FTP",
+        "cycle": "每日19点30分运行一次",
+        "fileFormat": "TB_B_PAYLOG2_YYYYMMDD",
+        "id": "20",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "TB_B_PAYLOG_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "19",
+          "interval": "每日",
+          "min": "30",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "10G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:35:02",
+              "lost": "382",
+              "size": "10G",
+              "starttime": "2018-04-16 19:30:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:39:02",
+              "lost": "214",
+              "size": "510G",
+              "starttime": "2018-04-16 19:35:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:42:02",
+              "lost": "133",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:40:02",
+              "lost": "80",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 19:40:02",
+        "name": "TB_B_PAYLOG",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.TB_B_PAYLOG",
+        "type": "流量"
+      },
+      {
+        "key": 21,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日21点20分运行一次",
+        "fileFormat": "DMS_WEEK_WORK_YYYYMMDD",
+        "id": "21",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMS_WEEK_WORK_${YYYMMDD}_${N3}",
+          "endtime": "2018-07-01 00:00:00",
+          "hour": "22",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "6G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:25:01",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:23:07",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:26:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:25:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:28:12",
+              "lost": "80",
+              "size": "6G",
+              "starttime": "2018-04-16 22:26:52",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 22:28:12",
+        "name": "DMS_WEEK_WORK",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMS_WEEK_WORK",
+        "type": "流量"
+      },
+      {
+        "key": 22,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日13点00分运行一次",
+        "fileFormat": "DMS_MOUNTH_WORK__2YYYYMM",
+        "id": "22",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMS_WEEK_WORK_${YYYMMDD}_${N3}",
+          "endtime": "2018-07-01 00:00:00",
+          "hour": "22",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "6G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:25:01",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:23:07",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:26:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:25:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:28:12",
+              "lost": "80",
+              "size": "6G",
+              "starttime": "2018-04-16 22:26:52",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 22:28:12",
+        "name": "DMS_WEEK_WORK_2",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMS_WEEK_WORK_2",
+        "type": "流量"
+      },
+      {
+        "key": 23,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日13点30分运行一次",
+        "fileFormat": "DMS_SS_CALL2_YYYYMMDD",
+        "id": "23",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMS_SR_CALL_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "23",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "8G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:25:01",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:23:07",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:26:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:25:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:28:12",
+              "lost": "80",
+              "size": "6G",
+              "starttime": "2018-04-16 22:26:52",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 22:28:12",
+        "name": "DMS_SR_CALL",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMS_SR_CALL",
+        "type": "流量"
+      },
+      {
+        "key": 24,
+        "busiType": "采集",
+        "connId": "8",
+        "connType": "FTP",
+        "cycle": "每日12点25分运行一次",
+        "fileFormat": "DMC_T44_CDR2_YYYYMMDD",
+        "id": "24",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMC_SR_CDR_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "23",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "5G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:15:46",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:10:17",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:18:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:15:46",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:19:12",
+              "lost": "80",
+              "size": "5G",
+              "starttime": "2018-04-16 22:18:47",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 18:22:12",
+        "name": "DMC_SR_CDR",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMC_SR_CDR",
+        "type": "流量"
+      },
+      {
+        "key": 25,
+        "busiType": "采集",
+        "connId": "3",
+        "connType": "FTP",
+        "cycle": "每日15点40分运行一次",
+        "fileFormat": "TB_CUST_USER2_YYYYMMDD",
+        "id": "25",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "TB_CUST_ACC_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "19",
+          "interval": "每日",
+          "min": "30",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "10G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:35:02",
+              "lost": "382",
+              "size": "10G",
+              "starttime": "2018-04-16 19:30:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:39:02",
+              "lost": "214",
+              "size": "510G",
+              "starttime": "2018-04-16 19:35:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:42:02",
+              "lost": "133",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:40:02",
+              "lost": "80",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 19:40:02",
+        "name": "DMC_SR_CDR",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.TB_CUST_ACC",
+        "type": "流量"
+      },
+      {
+        "key": 26,
+        "busiType": "分发",
+        "connType": "",
+        "cycle": "",
+        "fileFormat": "",
+        "id": "26",
+        "inSize": "",
+        "lastBatchFinshTime": "",
+        "name": "KB_CDMA_DATA_CO_MID1",
+        "out": [
+          {
+            "connId": "4",
+            "cycle": "每日23点00分运行一次",
+            "lastDataBatch": "2018-04-16 23:18:02",
+            "outSize": "24G",
+            "outlog": {
+              "addstep": [
+                {
+                  "addbatch": "20180417102302",
+                  "count": "1134533",
+                  "endtime": "2018-04-17 10:23:52",
+                  "lost": "50",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:02",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "20180417102302",
+                  "count": "113453",
+                  "endtime": "2018-04-17 10:24:20",
+                  "lost": "23",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:57",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "allbatch": "20180416230000",
+              "allstep": [
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:05:05",
+                  "lost": "305",
+                  "size": "20G",
+                  "starttime": "2018-04-16 23:00:00",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:07:02",
+                  "lost": "128",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:05:10",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "清理目标表相关数据"
+                },
+                {
+                  "addbatch": "",
+                  "count": "20134531",
+                  "endtime": "2018-04-16 23:08:11",
+                  "lost": "64",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:07:07",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "databatch": "2018041623",
+              "status": "成功"
+            },
+            "stat": "分发成功",
+            "statReason": "",
+            "toTarget": "BP.KB_CDMA_DATA_SUM_D_MID"
+          }
+        ],
+        "status": "分发成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "MID.KB_CDMA_DATA_SUM_D_MID1",
+        "type": "流量"
+      },
+      {
+        "key": 27,
+        "busiType": "分发",
+        "connType": "",
+        "cycle": "",
+        "fileFormat": "",
+        "id": "27",
+        "inSize": "",
+        "lastBatchFinshTime": "",
+        "name": "KB_CDMA_DATA_FLIE_MID1",
+        "out": [
+          {
+            "connId": "4",
+            "cycle": "每日23点00分运行一次",
+            "lastDataBatch": "2018-04-16 23:18:02",
+            "outSize": "24G",
+            "outlog": {
+              "addstep": [
+                {
+                  "addbatch": "20180417102302",
+                  "count": "1134533",
+                  "endtime": "2018-04-17 10:23:52",
+                  "lost": "50",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:02",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "20180417102302",
+                  "count": "113453",
+                  "endtime": "2018-04-17 10:24:20",
+                  "lost": "23",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:57",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "allbatch": "20180416230000",
+              "allstep": [
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:05:05",
+                  "lost": "305",
+                  "size": "20G",
+                  "starttime": "2018-04-16 23:00:00",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:07:02",
+                  "lost": "128",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:05:10",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "清理目标表相关数据"
+                },
+                {
+                  "addbatch": "",
+                  "count": "20134531",
+                  "endtime": "2018-04-16 23:08:11",
+                  "lost": "64",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:07:07",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "databatch": "2018041623",
+              "status": "成功"
+            },
+            "stat": "分发成功",
+            "statReason": "",
+            "toTarget": "BP.KB_CDMA_DATA_TTIE_D_MID1"
+          }
+        ],
+        "status": "分发成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "MID.KB_CDMA_DATA_TTIE_D_MID1",
+        "type": "流量"
+      },
+      {
+        "key": 28,
+        "busiType": "采集",
+        "connId": "3",
+        "connType": "FTP",
+        "cycle": "每日19点30分运行一次",
+        "fileFormat": "TB_B_PbbdOG2_YYYYMMDD",
+        "id": "28",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "TB_B_PAYLOG_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "19",
+          "interval": "每日",
+          "min": "30",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "10G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:35:02",
+              "lost": "382",
+              "size": "10G",
+              "starttime": "2018-04-16 19:30:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:39:02",
+              "lost": "214",
+              "size": "510G",
+              "starttime": "2018-04-16 19:35:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:42:02",
+              "lost": "133",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:40:02",
+              "lost": "80",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 19:40:02",
+        "name": "TB_B_PAYLOG",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.TB_B_PAYLOG",
+        "type": "流量"
+      },
+      {
+        "key": 29,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日21点20分运行一次",
+        "fileFormat": "DMS_WEEK_WORK_YYYYMMDD",
+        "id": "29",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMS_WEEK_WORK_${YYYMMDD}_${N3}",
+          "endtime": "2018-07-01 00:00:00",
+          "hour": "22",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "6G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:25:01",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:23:07",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:26:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:25:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:28:12",
+              "lost": "80",
+              "size": "6G",
+              "starttime": "2018-04-16 22:26:52",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 22:28:12",
+        "name": "DMS_WEEK_WORK",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMS_WEEK_WORK",
+        "type": "流量"
+      },
+      {
+        "key": 30,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日13点00分运行一次",
+        "fileFormat": "DMS_MOUNTH_WORK__2YYYYMM",
+        "id": "30",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMS_WEEK_WORK_${YYYMMDD}_${N3}",
+          "endtime": "2018-07-01 00:00:00",
+          "hour": "22",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "6G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:25:01",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:23:07",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:26:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:25:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:28:12",
+              "lost": "80",
+              "size": "6G",
+              "starttime": "2018-04-16 22:26:52",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 22:28:12",
+        "name": "DMS_WEEK_WORK_2",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMS_WEEK_WORK_2",
+        "type": "流量"
+      },
+      {
+        "key": 31,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日13点30分运行一次",
+        "fileFormat": "DMS_SS_CALL2_YYYYMMDD",
+        "id": "31",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMS_SR_CALL_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "23",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "8G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:25:01",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:23:07",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:26:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:25:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:28:12",
+              "lost": "80",
+              "size": "6G",
+              "starttime": "2018-04-16 22:26:52",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 22:28:12",
+        "name": "DMS_SR_CALL",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMS_SR_CALL",
+        "type": "流量"
+      },
+      {
+        "key": 32,
+        "busiType": "采集",
+        "connId": "8",
+        "connType": "FTP",
+        "cycle": "每日12点25分运行一次",
+        "fileFormat": "DMC_T44_CDR2_YYYYMMDD",
+        "id": "32",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMC_SR_CDR_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "23",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "5G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:15:46",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:10:17",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:18:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:15:46",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "130812690",
+              "endtime": "2018-04-16 22:19:12",
+              "lost": "80",
+              "size": "5G",
+              "starttime": "2018-04-16 22:18:47",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 18:22:12",
+        "name": "DMC_SR_CDR",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMC_SR_CDR",
+        "type": "流量"
+      },
+      {
+        "key": 33,
+        "busiType": "采集",
+        "connId": "3",
+        "connType": "FTP",
+        "cycle": "每日15点40分运行一次",
+        "fileFormat": "TB_CUST_USER2_YYYYMMDD",
+        "id": "33",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "TB_CUST_ACC_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "19",
+          "interval": "每日",
+          "min": "30",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "10G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:35:02",
+              "lost": "382",
+              "size": "10G",
+              "starttime": "2018-04-16 19:30:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:39:02",
+              "lost": "214",
+              "size": "510G",
+              "starttime": "2018-04-16 19:35:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:42:02",
+              "lost": "133",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:40:02",
+              "lost": "80",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 19:40:02",
+        "name": "DMC_SR_CDR",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.TB_CUST_ACC",
+        "type": "流量"
+      },
+      {
+        "key": 34,
+        "busiType": "分发",
+        "connType": "",
+        "cycle": "",
+        "fileFormat": "",
+        "id": "34",
+        "inSize": "",
+        "lastBatchFinshTime": "",
+        "name": "KB_CDMA_DATA_CO_MID1",
+        "out": [
+          {
+            "connId": "4",
+            "cycle": "每日23点00分运行一次",
+            "lastDataBatch": "2018-04-16 23:18:02",
+            "outSize": "24G",
+            "outlog": {
+              "addstep": [
+                {
+                  "addbatch": "20180417102302",
+                  "count": "1134533",
+                  "endtime": "2018-04-17 10:23:52",
+                  "lost": "50",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:02",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "20180417102302",
+                  "count": "113453",
+                  "endtime": "2018-04-17 10:24:20",
+                  "lost": "23",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:57",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "allbatch": "20180416230000",
+              "allstep": [
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:05:05",
+                  "lost": "305",
+                  "size": "20G",
+                  "starttime": "2018-04-16 23:00:00",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:07:02",
+                  "lost": "128",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:05:10",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "清理目标表相关数据"
+                },
+                {
+                  "addbatch": "",
+                  "count": "20134531",
+                  "endtime": "2018-04-16 23:08:11",
+                  "lost": "64",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:07:07",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "databatch": "2018041623",
+              "status": "成功"
+            },
+            "stat": "分发成功",
+            "statReason": "",
+            "toTarget": "BP.KB_CDMA_DATA_SUM_D_MID"
+          }
+        ],
+        "status": "分发成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "MID.KB_CDMA_DATA_SUM_D_MID1",
+        "type": "流量"
+      },
+      {
+        "key": 35,
+        "busiType": "分发",
+        "connType": "",
+        "cycle": "",
+        "fileFormat": "",
+        "id": "35",
+        "inSize": "",
+        "lastBatchFinshTime": "",
+        "name": "KB_CDMA_DATA_FLIE_MID1",
+        "out": [
+          {
+            "connId": "4",
+            "cycle": "每日23点00分运行一次",
+            "lastDataBatch": "2018-04-16 23:18:02",
+            "outSize": "24G",
+            "outlog": {
+              "addstep": [
+                {
+                  "addbatch": "20180417102302",
+                  "count": "1134533",
+                  "endtime": "2018-04-17 10:23:52",
+                  "lost": "50",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:02",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "20180417102302",
+                  "count": "113453",
+                  "endtime": "2018-04-17 10:24:20",
+                  "lost": "23",
+                  "size": "1G",
+                  "starttime": "2018-04-17 10:23:57",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "allbatch": "20180416230000",
+              "allstep": [
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:05:05",
+                  "lost": "305",
+                  "size": "20G",
+                  "starttime": "2018-04-16 23:00:00",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "分发到临时表"
+                },
+                {
+                  "addbatch": "",
+                  "count": "2013453",
+                  "endtime": "2018-04-16 23:07:02",
+                  "lost": "128",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:05:10",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "清理目标表相关数据"
+                },
+                {
+                  "addbatch": "",
+                  "count": "20134531",
+                  "endtime": "2018-04-16 23:08:11",
+                  "lost": "64",
+                  "size": "10G",
+                  "starttime": "2018-04-16 23:07:07",
+                  "stat": "成功",
+                  "statReason": "",
+                  "stepName": "临时表写入目标表"
+                }
+              ],
+              "databatch": "2018041623",
+              "status": "成功"
+            },
+            "stat": "分发成功",
+            "statReason": "",
+            "toTarget": "BP.KB_CDMA_DATA_TTIE_D_MID1"
+          }
+        ],
+        "status": "分发成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "MID.KB_CDMA_DATA_TTIE_D_MID1",
+        "type": "流量"
+      },
+      {
+        "key": 36,
+        "busiType": "采集",
+        "connId": "3",
+        "connType": "FTP",
+        "cycle": "每日19点30分运行一次",
+        "fileFormat": "TB_B_PbbdOG2_YYYYMMDD",
+        "id": "36",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "TB_B_PAYLOG_${YYYMMDD}_${N3}",
+          "endtime": "",
+          "hour": "19",
+          "interval": "每日",
+          "min": "30",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "10G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:35:02",
+              "lost": "382",
+              "size": "10G",
+              "starttime": "2018-04-16 19:30:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:39:02",
+              "lost": "214",
+              "size": "510G",
+              "starttime": "2018-04-16 19:35:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:42:02",
+              "lost": "133",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "1330812690",
+              "endtime": "2018-04-16 19:40:02",
+              "lost": "80",
+              "size": "10G",
+              "starttime": "2018-04-16 19:39:02",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 19:40:02",
+        "name": "TB_B_PAYLOG",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.TB_B_PAYLOG",
+        "type": "流量"
+      },
+      {
+        "key": 37,
+        "busiType": "采集",
+        "connId": "7",
+        "connType": "FTP",
+        "cycle": "每日22点20分运行一次",
+        "fileFormat": "DMS_WEEK_WORK_YYYYMMDD",
+        "id": "37",
+        "in": {
+          "batchFormat": "YYYMMDD",
+          "cron": "",
+          "day": "",
+          "downfileFormat": "DMS_WEEK_WORK_${YYYMMDD}_${N3}",
+          "endtime": "2018-07-01 00:00:00",
+          "hour": "22",
+          "interval": "每日",
+          "min": "20",
+          "starttime": "",
+          "storeop": "覆盖",
+          "transType": "1"
+        },
+        "inSize": "6G",
+        "inlog": {
+          "allbatch": "20180416222000",
+          "allstep": [
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:23:02",
+              "lost": "182",
+              "size": "5G",
+              "starttime": "2018-04-16 22:20:00",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "FTP下载"
+            },
+            {
+              "addbatch": "",
+              "count": "100812690",
+              "endtime": "2018-04-16 22:25:01",
+              "lost": "114",
+              "size": "5G",
+              "starttime": "2018-04-16 22:23:07",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "合并文件"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:26:47",
+              "lost": "103",
+              "size": "6G",
+              "starttime": "2018-04-16 22:25:06",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入临时表"
+            },
+            {
+              "addbatch": "",
+              "count": "120812690",
+              "endtime": "2018-04-16 22:28:12",
+              "lost": "80",
+              "size": "6G",
+              "starttime": "2018-04-16 22:26:52",
+              "stat": "成功",
+              "statReason": "",
+              "stepName": "入存储表"
+            }
+          ],
+          "databatch": "20180416",
+          "status": "成功"
+        },
+        "lastBatchFinshTime": "2018-04-16 22:28:12",
+        "name": "DMS_WEEK_WORK",
+        "status": "采集成功",
+        "statusReason": "",
+        "store": "hive",
+        "table": "SRC.DMS_WEEK_WORK",
+        "type": "流量"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "msg": "ok",
+  "data": {
+    "page": {
+      "total": 10,
+      "curPage": 1,
+      "pageSize": 20
+    },
+    "list": [
+      {
+
+      }
+    ]
+  }
+}
